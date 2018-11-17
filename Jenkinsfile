@@ -1,9 +1,9 @@
-
 pipeline {
+  agent { label 'linux' }
     stages {
       stage('Unit Tests') {
         steps {
-          sh "env"
+          sh "ant text.xml>junit_report.xml"
         }
       }
     }
