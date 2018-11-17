@@ -15,7 +15,7 @@ pipeline {
       }
 	   stage('Deploy') {
         steps {
-		  aws s3 cp dist/rectangle-${BUILD_NUMBER}.jar https://s3.amazonaws.com/chak1581-assignment-3/rectangle-${BUILD_NUMBER}.jar
+		  aws s3 cp dist/rectangle-${BUILD_NUMBER}.jar s3://chak1581-assignment-3/rectangle-${BUILD_NUMBER}.jar
         }
       }
     }
