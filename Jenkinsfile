@@ -3,7 +3,7 @@ pipeline {
     stages {
       stage('Unit Tests') {
         steps {
-          sh "ant -f test.xml -v"
+          sh "ant -f test.xml -v>>reports/result.xml"
         }
       }
     }
