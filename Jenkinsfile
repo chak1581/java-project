@@ -1,8 +1,7 @@
 
 pipeline {
-  agent { label 'linux' }
     stages {
-      stage('Test') {
+      stage('Unit Tests') {
         steps {
           sh "env"
         }
