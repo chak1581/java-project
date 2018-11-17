@@ -1,3 +1,4 @@
+pipeline {
   agent { label 'linux' }
     stages {
       stage('Unit Tests') {
@@ -14,7 +15,7 @@
       }
 	   stage('Deploy') {
         steps {
-		  sh "aws s3 cp dist/rectangle-${BUILD_NUMBER}.jar https://s3.amazonaws.com/chak1581-assignment-3/"
+		  aws s3 cp dist/rectangle-${BUILD_NUMBER}.jar https://s3.amazonaws.com/chak1581-assignment-3/rectangle-${BUILD_NUMBER}.jar
         }
       }
     }
